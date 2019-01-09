@@ -9,6 +9,6 @@ namespace TelegramBotSender.Models
     {
         public string Name { get; set; }
         public string Phone { get; set; }
-     
+        public string ChatId { get; set; }
     }
 }
