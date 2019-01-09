@@ -11,12 +11,12 @@ class Method
     {
         _token = Token;
     }
-    public void SendMessage(string message, int ChatID)
+    public void SendMessage(string message, string ChatID)
     {
         using (WebClient webclient = new WebClient())
         {
             NameValueCollection pars = new NameValueCollection();
-            pars.Add("chat_id", ChatID.ToString());
+            pars.Add("chat_id", ChatID);
             pars.Add("text", message);
             webclient.UploadValues(LINK + _token + "/sendMessage", pars);
 
