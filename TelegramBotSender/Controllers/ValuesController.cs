@@ -17,7 +17,7 @@ namespace TelegramBotSender.Controllers
             string Msg = String.Format("Новый клиент! \n Имя: {0} \n Номер: {1}", person.Name, person.Phone);
             string Token = "310637143:AAE9Qjmrxg6JlgpgxFdA5aC0QIBYF21wuRQ";
             Method m = new Method(Token);
-            m.SendMessage(Msg, 232076268);
+            m.SendMessage(Msg, person.ChatId);
         }
     }
 }
